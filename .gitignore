@@ -1,0 +1,10 @@
+.installed.cfg
+.mr.developer.cfg
+bin/
+develop-eggs/
+distribute-0.6.10.tar.gz
+downloads/
+eggs/
+include/
+lib/
+src/
