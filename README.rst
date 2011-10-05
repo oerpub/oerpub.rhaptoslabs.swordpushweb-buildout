@@ -16,4 +16,15 @@ To get the app going::
 Notes:
 ======
 
-If you do not have commit rights to all the repositories needed, the urls may need to change.
+The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to al the repositories, just replace::
+
+    ./bin/buildout -Nvv
+
+with::
+  
+    ./bin/buildout -Nvvc dev.cfg
+
+If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.config, and run::
+  
+    ./bin/buildout -Nvvc dev.cfg
+
