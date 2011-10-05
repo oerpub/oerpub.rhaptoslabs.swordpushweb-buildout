@@ -9,4 +9,5 @@ eggs/*
 !eggs/README
 include/
 lib/
+parts/
 src/
