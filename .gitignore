@@ -1,6 +1,7 @@
 .installed.cfg
 .mr.developer.cfg
 bin/
+.cache/
 develop-eggs/
 distribute-0.6.10.tar.gz
 downloads/*
@@ -12,3 +13,4 @@ lib/
 parts/
 src/
 tags
+sword2_logging.conf
