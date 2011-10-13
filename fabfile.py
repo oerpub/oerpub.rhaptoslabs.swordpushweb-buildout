@@ -63,7 +63,10 @@ def status():
     run('df -h')
 
     # Get an overview of the packages
-    _with_deploy_env(['./bin/develop status', 'git status'])
+    print '================================== Buildout'
+    _with_deploy_env(['./bin/develop status',
+                      'git status',
+                      'git log -1'])
 
     git_packages = ['oerpub.rhaptoslabs.cnxml2htmlpreview',
                     'oerpub.rhaptoslabs.sword1cnx',
