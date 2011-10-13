@@ -8,6 +8,7 @@ downloads/*
 !downloads/README
 eggs/*
 !eggs/README
+fab_config.py
 include/
 lib/
 parts/
