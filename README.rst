@@ -32,3 +32,21 @@ If you only have write access to some of them, just remove the lines mentioning 
   
     ./bin/buildout -Nvvc dev.cfg
 
+Nice-to-haves:
+==============
+
+The in-development packages are in the src directory. Each one of those is a self-contained git/hg repository. To get the newest code for all of them::
+
+    ./bin/develop up
+
+If you use the dev.cfg build, you get Fabric to help with deployment and updating on the server. fabfile.py holds the main commands, but you can add a fab_config.py to add different server contexts and commands without modifying the main fabfile. fab_config.py will be ignored by git. You would typically use it to set up an alternative to the qa server for your own testing. Typical usage of fabric:
+:
+
+    ./bin/fab -l
+    ./bin/fab qa status pull stop start
+
+For more info, see:
+
+https://github.com/jbeyers/projecttools/blob/master/presentation/presentation.rst
+
+http://fabfile.org
