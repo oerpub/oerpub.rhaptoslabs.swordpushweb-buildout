@@ -5,6 +5,11 @@ Fabric script for deploying the word converter consistently.
 from __future__ import with_statement
 from fabric.api import env, cd, run
 
+try:
+    from fab_config import *
+except:
+    pass
+
 def qa():
     """
     Set the context to the QA server
@@ -43,13 +48,6 @@ def start():
     Start up the pyramid app.
     """
     _with_deploy_env(['./bin/paster serve src/oerpub.rhaptoslabs.swordpushweb/oerpub/rhaptoslabs/production.ini --daemon'])
-
-def restart():
-    """
-    Restart just the zope instance, not the zeo.
-    """
-    stop()
-    start()
 
 def status():
     """
