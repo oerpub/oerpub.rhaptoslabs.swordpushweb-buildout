@@ -12,6 +12,8 @@ fab_config.py
 include/
 lib/
 parts/
+paster.log
+paster.pid
 src/
 tags
 sword2_logging.conf
