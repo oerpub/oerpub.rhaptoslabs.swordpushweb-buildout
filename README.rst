@@ -11,7 +11,7 @@ To get the app going::
     ./bin/python bootstrap.py
     ./bin/buildout -Nvv
     ./dev.sh
-    firefox http://localhost:6543/
+    firefox http://localhost:6544/
 
 Notes:
 ======
@@ -23,6 +23,10 @@ The instructions will give you read-only checkouts of the git repositories. The 
 with::
   
     ./bin/buildout -Nvvc dev.cfg
+
+The port number is also different::
+
+    firefox http://localhost:6543/
 
 If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.config, and run::
   
