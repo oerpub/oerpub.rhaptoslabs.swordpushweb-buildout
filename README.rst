@@ -1,11 +1,15 @@
 Buildout for development of the oerpub.rhaptoslabs.swordpushweb web app
 
+-------------------------------------------------------------------
+This is a special buildout which will include a gdocs importer!!!
+-------------------------------------------------------------------
+
 Quick start:
 ============
 
 To get the app going::
 
-    git clone git://github.com/jbeyers/oerpub.rhaptoslabs.swordpushweb-buildout.git swordpushweb-buildout
+    git clone git@github.com:therealmarv/oerpub.rhaptoslabs.swordpushweb-buildout.git swordpushweb-buildout
     cd swordpushweb-buildout
     virtualenv --no-site-packages .
     ./bin/python bootstrap.py
