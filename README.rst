@@ -3,7 +3,7 @@ Buildout for development of the oerpub.rhaptoslabs.swordpushweb web app
 Prerequisite:
 =============
 
-Installation is based on Ubuntu 10.04 or newer. The following packages only need to be installed once:
+Installation is based on Ubuntu 10.04 or newer. The following packages only need to be installed once::
 
     sudo apt-get install git mercurial libxslt1.1 libxslt1-dev python-dev python-virtualenv python-lxml python-libxslt1 libtidy-0.99-0 blahtexml
 
