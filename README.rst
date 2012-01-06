@@ -45,29 +45,6 @@ Please look at
 https://github.com/therealmarv/oerpub.rhaptoslabs.tralics
 
 
-For the LaTeX importer we need (this takes longer because it is about 2GB!)::
-
-    sudo apt-get install g++ imagemagick python-imaging xsltproc texlive-full
-
-For the Word/OpenOffice importer we need dependent on your Ubuntu version either LibreOffice (newer) or OpenOffice (older).
-
-This should install either LibreOffice or OpenOffice on all Ubuntu versions::
-
-    sudo apt-get install openoffice.org
-
-Setup Libre-/OpenOffice
------------------------
-
-(TODO: needs instruction for placing the OOo-macros to the right place)
-
-Setup Tralics (for LaTeX import)
---------------------------------
-
-Please look at
-
-https://github.com/therealmarv/oerpub.rhaptoslabs.tralics
-
-
 Quick start:
 ============
 
