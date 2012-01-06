@@ -28,11 +28,11 @@ You need to copy the macro file Module1.xba to your Libre-/OpenOffice config fol
 
 https://github.com/jbeyers/oerpub.rhaptoslabs.swordpushweb/tree/develop/docs/office_macro
 
-for OpenOffice, to::
+for OpenOffice to::
 
     cp Module1.xba ~/.openoffice.org/3/user/basic/Standard/.
 
-for LibreOffice, to::
+for LibreOffice to::
 
     cp Module1.xba ~/.config/.libreoffice/3/user/basic/Standard/.
 
