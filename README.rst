@@ -13,7 +13,7 @@ Install::
 
 For the LaTeX importer we need (this takes longer because it is about 2GB!)::
 
-    sudo apt-get install g++ imagemagick python-imaging xsltproc texlive-full
+    sudo apt-get install g++ imagemagick python-imaging xsltproc texlive-full zlib1g-dev
 
 For the Word/OpenOffice importer we need dependent on your Ubuntu version either LibreOffice (newer) or OpenOffice (older).
 
