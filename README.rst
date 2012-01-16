@@ -9,7 +9,7 @@ The installation of packages and setup of Libre-/OpenOffice and Tralics only nee
 
 Install::
 
-    sudo apt-get install git-core mercurial libxslt1.1 libxslt1-dev python-dev python-virtualenv python-lxml python-libxslt1 libtidy-0.99-0 blahtexml
+    sudo apt-get install git-core libxslt1.1 libxslt1-dev python-dev python-virtualenv python-lxml python-libxslt1 libtidy-0.99-0 blahtexml
 
 For the LaTeX importer we need (this takes longer because it is about 2GB!)::
 
@@ -26,7 +26,7 @@ Setup Libre-/OpenOffice
 
 You need to copy the macro file Module1.xba to your Libre-/OpenOffice config folder from
 
-https://github.com/jbeyers/oerpub.rhaptoslabs.swordpushweb/tree/develop/docs/office_macro
+https://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb/tree/develop/docs/office_macro
 
 for OpenOffice to::
 
@@ -42,7 +42,7 @@ Setup Tralics (for LaTeX import)
 
 Please look at
 
-https://github.com/therealmarv/oerpub.rhaptoslabs.tralics
+https://github.com/oerpub/oerpub.rhaptoslabs.tralics
 
 
 Quick start:
@@ -50,7 +50,7 @@ Quick start:
 
 To get the app going::
 
-    git clone git://github.com/jbeyers/oerpub.rhaptoslabs.swordpushweb-buildout.git swordpushweb-buildout
+    git clone git://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb-buildout.git swordpushweb-buildout
     cd swordpushweb-buildout
     virtualenv --no-site-packages .
     ./bin/python bootstrap.py
