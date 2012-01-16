@@ -9,17 +9,22 @@ The installation of packages and setup of Libre-/OpenOffice and Tralics only nee
 
 Install::
 
-    sudo apt-get install git-core libxslt1.1 libxslt1-dev python-dev python-virtualenv python-lxml python-libxslt1 libtidy-0.99-0 blahtexml
+    sudo apt-get install git-core libxslt1.1 libxslt1-dev libcurl3-gnutls libcurl4-gnutls-dev librtmp-dev python-dev python-virtualenv libtidy-0.99-0 blahtexml
 
 For the LaTeX importer we need (this takes longer because it is about 2GB!)::
 
-    sudo apt-get install g++ imagemagick python-imaging xsltproc texlive-full zlib1g-dev
+    sudo apt-get install g++ imagemagick xsltproc texlive-full zlib1g-dev
 
 For the Word/OpenOffice importer we need dependent on your Ubuntu version either LibreOffice (newer) or OpenOffice (older).
 
 This should install either LibreOffice or OpenOffice on all Ubuntu versions::
 
     sudo apt-get install openoffice.org
+
+Optional packages which you may need if you develop stuff locally::
+
+    sudo apt-get install python-lxml python-libxslt1 python-imaging
+
 
 Setup Libre-/OpenOffice
 -----------------------
