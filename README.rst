@@ -40,7 +40,8 @@ To download that file from the web, be sure and use the "raw" link at the top ri
 Otherwise you might save something that has github web stuff mixed in.
 
 You can find the openoffice config folder in your home directoy with::
-   find . -name ".*office"
+
+   find ~ -name ".*office"
 
 The openoffice config folder is in different places, depending on OpenOffice/LibreOffice's and Ubuntu's version.
 
