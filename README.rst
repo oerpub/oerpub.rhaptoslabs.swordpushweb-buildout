@@ -33,6 +33,9 @@ You need to copy the macro file Module1.xba to your Libre-/OpenOffice config fol
 
 https://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb/tree/develop/docs/office_macro
 
+To download that file from the web, be sure and use the "raw" link at the top right corner. 
+Otherwise you might save something that has github web stuff mixed in.
+
 for OpenOffice to::
 
     cp Module1.xba ~/.openoffice.org/3/user/basic/Standard/.
