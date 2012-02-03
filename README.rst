@@ -33,8 +33,18 @@ You need to copy the macro file Module1.xba to your Libre-/OpenOffice config fol
 
 https://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb/tree/develop/docs/office_macro
 
+to this OpenOffice subfolder
+   .xxxxxoffice/3/user/basic/Standard/.
+
 To download that file from the web, be sure and use the "raw" link at the top right corner. 
 Otherwise you might save something that has github web stuff mixed in.
+
+You can find the openoffice config folder in your home directoy with::
+   find . -name ".*office"
+
+The openoffice config folder is in different places, depending on OpenOffice/LibreOffice's and Ubuntu's version.
+
+Examples:
 
 for OpenOffice to::
 
@@ -42,7 +52,10 @@ for OpenOffice to::
 
 for LibreOffice to::
 
-    cp Module1.xba ~/.config/.libreoffice/3/user/basic/Standard/.
+    cp Module1.xba ~/.config/.libreoffice/3/user/basic/Standard/. 
+OR::
+    cp Module1.xba ~/.libreoffice/3/user/basic/Standard/.
+    
 
 
 Setup Tralics (for LaTeX import)
@@ -65,6 +78,8 @@ To get the app going::
     ./bin/buildout -Nvv
     ./dev.sh
     firefox http://localhost:6544/
+
+The port that it is running on will be listed at the end of the messages from running the dev.sh. It might actually be 6543.
 
 Notes:
 ======
