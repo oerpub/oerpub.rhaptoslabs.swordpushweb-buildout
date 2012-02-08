@@ -4,4 +4,4 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # kill everything which runs with virtualenv's python
-kill $(ps aux | grep '${DIR}/bin/python' | grep -v grep | awk '{print $2}')
+kill $(ps aux | grep "${DIR}/bin/python" | grep -v grep | awk '{print $2}')
