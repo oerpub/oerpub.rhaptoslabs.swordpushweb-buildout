@@ -9,7 +9,7 @@ The installation of packages and setup of Libre-/OpenOffice and Tralics only nee
 
 Install::
 
-    sudo apt-get install git-core libxslt1.1 libxslt1-dev libcurl3-gnutls libcurl4-gnutls-dev librtmp-dev python-dev python-virtualenv libtidy-0.99-0 blahtexml
+    sudo apt-get install git-core libxslt1.1 libxslt1-dev libcurl3-gnutls libcurl4-gnutls-dev librtmp-dev python-dev python-virtualenv libtidy-0.99-0 blahtexml jing
 
 For the LaTeX importer we need (this takes longer because it is about 2GB!)::
 
