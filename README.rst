@@ -77,7 +77,7 @@ To get the app going::
     cd swordpushweb-buildout
     virtualenv --no-site-packages .
     ./bin/python bootstrap.py
-    ./bin/buildout -Nvv
+    ./bin/buildout -Nv
     ./dev.sh
     firefox http://localhost:6544/
 
@@ -88,11 +88,11 @@ Notes:
 
 The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to al the repositories, just replace::
 
-    ./bin/buildout -Nvv
+    ./bin/buildout -Nv
 
 with::
   
-    ./bin/buildout -Nvvc dev.cfg
+    ./bin/buildout -Nvc dev.cfg
 
 The port number is also different::
 
@@ -100,7 +100,7 @@ The port number is also different::
 
 If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.config, and run::
   
-    ./bin/buildout -Nvvc dev.cfg
+    ./bin/buildout -Nvc dev.cfg
 
 Nice-to-haves:
 ==============
