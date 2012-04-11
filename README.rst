@@ -11,10 +11,6 @@ Install::
 
     sudo apt-get install git-core libxslt1.1 libxslt1-dev libcurl3-gnutls libcurl4-gnutls-dev librtmp-dev python-dev python-virtualenv libtidy-0.99-0 blahtexml jing
 
-For the LaTeX importer we need (this takes longer because it is about 2GB!)::
-
-    sudo apt-get install g++ imagemagick xsltproc texlive-full zlib1g-dev
-
 For the Word/OpenOffice importer we need dependent on your Ubuntu version either LibreOffice (newer) or OpenOffice (older).
 
 This should install either LibreOffice or OpenOffice on all Ubuntu versions::
@@ -60,10 +56,16 @@ OR::
     
 
 
-Setup Tralics (for LaTeX import)
---------------------------------
+LaTeX importer (Tralics)
+------------------------
 
-Please look at
+The LaTeX importer is optional. When you do now want to import LaTeX you do not need the following packages.
+
+This Ubuntu packages are necessary for LaTeX importer (about 2GB!)::
+
+    sudo apt-get install g++ imagemagick xsltproc texlive-full zlib1g-dev
+
+Then compile and follow instructions for Tralics here:
 
 https://github.com/oerpub/oerpub.rhaptoslabs.tralics
 
