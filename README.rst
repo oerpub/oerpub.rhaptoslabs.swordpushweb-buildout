@@ -1,3 +1,8 @@
+OERPub is a SWORD based a document importer for Rhaptos and Connexions based installations.
+
+more (non technical) info: http://oerpub.org
+
+
 Buildout for development of the oerpub.rhaptoslabs.swordpushweb web app
 
 Setup your system
