@@ -26,6 +26,12 @@ Optional packages which you may need if you develop stuff locally::
 
     sudo apt-get install python-lxml python-libxslt1 python-imaging
 
+If you want to use the git pre-commit hook::
+    
+    cd .git/hooks
+    ln -s ../../pre-commit.py pre-commit
+    chmod +x pre-commit
+
 
 Setup Libre-/OpenOffice
 -----------------------
