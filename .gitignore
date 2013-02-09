@@ -17,3 +17,5 @@ paster.pid
 src/
 tags
 sword2_logging.conf
+*.egg-info
+local/*
