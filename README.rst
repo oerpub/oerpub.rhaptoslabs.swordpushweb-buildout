@@ -47,11 +47,11 @@ If you use another Ubuntu and/or 32bit Ubuntu follow this steps::
 
 Install anything it lists using apt-get (and sudo). You should be doing the git checkout and the building as a non-root user.
 
-Once you have it all installed, run:
+Once you have it all installed, run::
 
     dpkg-buildpackage -b -uc -rfakeroot
 
-When this process is done, assuming there are no errors, you will have a number of .deb files in the parent directory. These can be installed either directly with dpkg:
+When this process is done, assuming there are no errors, you will have a number of .deb files in the parent directory. These can be installed either directly with dpkg::
 
     dpkg -i tidy_20121113git-1_amd64.deb libtidy-0.99-0_20121113git-1_amd64.deb
 
