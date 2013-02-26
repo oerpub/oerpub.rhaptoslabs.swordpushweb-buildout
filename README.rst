@@ -78,36 +78,32 @@ https://github.com/oerpub/oerpub.rhaptoslabs.tralics
 Quick start:
 ============
 
-To get the app going::
+To get a readonly production buildout::
 
-    git clone git://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb-buildout.git swordpushweb-buildout
-    cd swordpushweb-buildout
-    virtualenv --no-site-packages .
+    git clone git://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb-buildout.git oerpub-buildout
+    cd oerpub-buildout
+    virtualenv .
     ./bin/python bootstrap.py
     ./bin/buildout -Nv
-    ./dev.sh
-    firefox http://localhost:6544/
-
-The port that it is running on will be listed at the end of the messages from running the dev.sh. It might actually be 6543.
-
-Notes:
-======
-
-The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to al the repositories, just replace::
-
+    ./bin/easy_install -U distribute
     ./bin/buildout -Nv
-
-with::
-  
-    ./bin/buildout -Nvc dev.cfg
-
-The port number is also different::
-
+    ./dev.sh
     firefox http://localhost:6543/
 
-If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.config, and run::
-  
+Dev Buildout:
+=============
+
+The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to all the repositories make the buildout this way. If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.cfg::
+
+    git clone git://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb-buildout.git oerpub-buildout
+    cd oerpub-buildout
+    virtualenv .
+    ./bin/python bootstrap.py -v 1.5.2 -c dev.cfg
     ./bin/buildout -Nvc dev.cfg
+    ./bin/easy_install -U distribute
+    ./bin/buildout -Nvc dev.cfg
+    ./dev.sh
+    firefox http://localhost:6543/
 
 Nice-to-haves:
 ==============
