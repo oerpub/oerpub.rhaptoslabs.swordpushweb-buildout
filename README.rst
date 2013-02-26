@@ -31,7 +31,12 @@ Install of experimental HTML5 tidy-html for Ubuntu 12.04 x64 (needed)
 
 If you use Ubuntu 12.04 x64 version you can install it quite easy::
 
-    sudo deb http://public.upfronthosting.co.za/debian/precise-amd64 /
+Add following line to /etc/apt/sources.list::
+
+    deb http://public.upfronthosting.co.za/debian/precise-amd64 /
+    
+Execute::
+
     sudo apt-get update
     sudo apt-get install tidy libtidy-0.99-0
 
