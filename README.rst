@@ -1,4 +1,4 @@
-OERPub is a SWORD based a document importer for Rhaptos and Connexions based installations.
+OERPUB is a SWORD based a document importer for Rhaptos and Connexions based installations.
 
 more (non technical) info: http://oerpub.org
 
@@ -26,9 +26,43 @@ Optional packages which you may need if you develop stuff locally::
 
     sudo apt-get install python-lxml python-libxslt1 python-imaging
 
+Install of experimental HTML5 tidy-html for Ubuntu 12.04 x64 (needed)
+---------------------------------------------------------------------
 
-Setup Libre-/OpenOffice
------------------------
+If you use Ubuntu 12.04 x64 version you can install it quite easy::
+
+    sudo deb http://public.upfronthosting.co.za/debian/precise-amd64 /
+    sudo apt-get update
+    sudo apt-get install tidy libtidy-0.99-0
+
+Install of experimental HTML5 tidy-html for other Ubuntu (needed)
+-----------------------------------------------------------------
+
+If you use another Ubuntu and/or 32bit Ubuntu follow this steps::
+
+    sudo apt-get install build-essential fakeroot
+    git clone git://github.com/oerpub/tidy-html5.git
+    cd tidy-html5
+    dpkg-checkbuildeps
+
+Install anything it lists using apt-get (and sudo). You should be doing the git checkout and the building as a non-root user.
+
+Once you have it all installed, run:
+
+    dpkg-buildpackage -b -uc -rfakeroot
+
+When this process is done, assuming there are no errors, you will have a number of .deb files in the parent directory. These can be installed either directly with dpkg:
+
+    dpkg -i tidy_20121113git-1_amd64.deb libtidy-0.99-0_20121113git-1_amd64.deb
+
+or you can use the graphical package manager, which is generally a bit safer because it also handles dependency management (though there
+should be no such issues, since you just built it on the same machine).
+
+Watch out for the tidy-doc package. I have reports that its post-install script errors, but you don't need it anyway, it is no
+different than the one that comes with your distro.
+
+Setup Libre-/OpenOffice (needed for doc conversion)
+---------------------------------------------------
 
 You need to copy the macro file Module1.xba to your Libre-/OpenOffice config folder from
 
@@ -61,8 +95,8 @@ OR::
     
 
 
-LaTeX importer (Tralics)
-------------------------
+LaTeX Tralics importer (optional)
+---------------------------------
 
 The LaTeX importer is optional. When you do now want to import LaTeX you do not need the following packages.
 
@@ -75,8 +109,8 @@ Then compile and follow instructions for Tralics here:
 https://github.com/oerpub/oerpub.rhaptoslabs.tralics
 
 
-Quick start:
-============
+Production buildout:
+====================
 
 To get a readonly production buildout::
 
@@ -90,8 +124,8 @@ To get a readonly production buildout::
     ./dev.sh
     firefox http://localhost:6543/
 
-Dev Buildout:
-=============
+Development buildout for people with write access to OERPUB:
+============================================================
 
 The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to all the repositories make the buildout this way. If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.cfg::
 
