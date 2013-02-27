@@ -1,12 +1,14 @@
-OERPUB is a SWORD based a document importer for Rhaptos and Connexions based installations.
+OERPUB-REMIX is for importing, editing, and depositing educational documents, especially textbooks. The deposit 
+protocol is based on SWORD and works with Connexions (cnx.org) currently. The application imports documents in Word, Open 
+Office, LaTeX, Google Docs, or HTML format. Then an HTML5 editor, based on Aloha, is used to edit the documents. Finally, 
+metadata is added, and then the document can be downloaded and saved locally, or uploaded to cnx.org for publishing as part
+of an open textbook and educational resource library.
 
-more (non technical) info: http://oerpub.org
+For more about the project as a whole (non technical) see our website: http://oerpub.org
 
-
-Buildout for development of the oerpub.rhaptoslabs.swordpushweb web app
-
-Setup your system
+Setup your system for development
 =================
+Buildout for development of the oerpub.rhaptoslabs.swordpushweb web application.
 
 Installation is based on Ubuntu 10.04 or newer.
 
@@ -16,7 +18,7 @@ Install::
 
     sudo apt-get install git-core libxslt1.1 libxslt1-dev libcurl3-gnutls libcurl4-gnutls-dev librtmp-dev python-dev python-virtualenv libtidy-0.99-0 blahtexml jing mysql-server libmysqlclient-dev
 
-For the Word/OpenOffice importer we need dependent on your Ubuntu version either LibreOffice (newer) or OpenOffice (older).
+The Word/OpenOffice importer depends on your Ubuntu version. You will either need LibreOffice (newer) or OpenOffice (older).
 
 This should install either LibreOffice or OpenOffice on all Ubuntu versions::
 
@@ -29,9 +31,9 @@ Optional packages which you may need if you develop stuff locally::
 Install of experimental HTML5 tidy-html for Ubuntu 12.04 x64 (needed)
 ---------------------------------------------------------------------
 
-If you use Ubuntu 12.04 x64 version you can install it quite easy::
+If you use Ubuntu 12.04 x64 version you can install it quite easily::
 
-Add following line to /etc/apt/sources.list::
+Add the following line to /etc/apt/sources.list::
 
     deb http://public.upfronthosting.co.za/debian/precise-amd64 /
     
@@ -43,20 +45,21 @@ Execute::
 Install of experimental HTML5 tidy-html for other Ubuntu (needed)
 -----------------------------------------------------------------
 
-If you use another Ubuntu and/or 32bit Ubuntu follow this steps::
+If you use another Ubuntu and/or 32bit Ubuntu follow these steps::
 
     sudo apt-get install build-essential fakeroot
     git clone git://github.com/oerpub/tidy-html5.git
     cd tidy-html5
     dpkg-checkbuildeps
 
-Install anything it lists using apt-get (and sudo). You should be doing the git checkout and the building as a non-root user.
+Install anything it lists using apt-get (and sudo). You should be doing the git checkout and then building as a non-root user.
 
 Once you have it all installed, run::
 
     dpkg-buildpackage -b -uc -rfakeroot
 
-When this process is done, assuming there are no errors, you will have a number of .deb files in the parent directory. These can be installed either directly with dpkg::
+When this process is done, assuming there are no errors, you will have a number of .deb files in the parent directory. 
+These can be installed either directly with dpkg::
 
     dpkg -i tidy_20121113git-1_amd64.deb libtidy-0.99-0_20121113git-1_amd64.deb
 
@@ -103,9 +106,9 @@ OR::
 LaTeX Tralics importer (optional)
 ---------------------------------
 
-The LaTeX importer is optional. When you do now want to import LaTeX you do not need the following packages.
+The LaTeX importer is optional. If you want to import LaTeX you will need the following packages.
 
-This Ubuntu packages are necessary for LaTeX importer (about 2GB!)::
+These Ubuntu packages are necessary for the LaTeX importer (about 2GB!)::
 
     sudo apt-get install g++ imagemagick xsltproc texlive-full zlib1g-dev
 
@@ -132,7 +135,11 @@ To get a readonly production buildout::
 Development buildout for people with write access to OERPUB:
 ============================================================
 
-The instructions will give you read-only checkouts of the git repositories. The writeable repository links are in the dev.cfg file. If you have write access to all the repositories make the buildout this way. If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to from dev.cfg::
+The instructions below will give you writable checkouts of the git repositories. 
+The writeable repository links are in the dev.cfg file. 
+If you have write access to all the repositories make the buildout this way. 
+If you only have write access to some of them, just remove the lines mentioning the ones you have read-only access to 
+from dev.cfg::
 
     git clone git://github.com/oerpub/oerpub.rhaptoslabs.swordpushweb-buildout.git oerpub-buildout
     cd oerpub-buildout
@@ -147,11 +154,15 @@ The instructions will give you read-only checkouts of the git repositories. The 
 Nice-to-haves:
 ==============
 
-The in-development packages are in the src directory. Each one of those is a self-contained git/hg repository. To get the newest code for all of them::
+The in-development packages are in the src directory. Each one of those is a self-contained git/hg repository. 
+To get the newest code for all of them::
 
     ./bin/develop up
 
-If you use the dev.cfg build, you get Fabric to help with deployment and updating on the server. fabfile.py holds the main commands, but you can add a fab_config.py to add different server contexts and commands without modifying the main fabfile. fab_config.py will be ignored by git. You would typically use it to set up an alternative to the qa server for your own testing. Typical usage of fabric:
+If you use the dev.cfg build, you get Fabric to help with deployment and updating on the server. 
+fabfile.py holds the main commands, but you can add a fab_config.py to add different server contexts and commands 
+without modifying the main fabfile. fab_config.py will be ignored by git. You would typically use it to set up an 
+alternative to the qa server for your own testing. Typical usage of fabric:
 :
 
     ./bin/fab -l
