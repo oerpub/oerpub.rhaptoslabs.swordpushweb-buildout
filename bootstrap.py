@@ -20,8 +20,18 @@ use the -c option to specify an alternate configuration file.
 $Id$
 """
 
-import os, shutil, sys, tempfile, urllib2
+import os, shutil, sys, tempfile, urllib2, ConfigParser
 from optparse import OptionParser
+
+def _get_version():
+    VERSION = ''
+    try:
+        parser = ConfigParser.SafeConfigParser({'zc.buildout': VERSION})
+        parser.read('versions.cfg')
+        VERSION = parser.get('versions', 'zc.buildout')
+    except:
+        print 'No versions.cfg found, continuing with defaults.'
+    return VERSION
 
 tmpeggs = tempfile.mkdtemp()
 
@@ -48,7 +58,7 @@ if options.config_file is not None:
 if options.version is not None:
     VERSION = '==%s' % options.version
 else:
-    VERSION = ''
+    VERSION = '==%s' % _get_version()
 
 USE_DISTRIBUTE = options.distribute
 args = args + ['bootstrap']
