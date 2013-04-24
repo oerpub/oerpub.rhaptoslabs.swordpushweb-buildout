@@ -6,7 +6,7 @@ of an open textbook and educational resource library.
 
 For more about the project as a whole (non technical) see our website: http://oerpub.org
 
-Installations instructions
-==========================
+Installation instructions
+=========================
 
 Please follow instructions on https://github.com/oerpub/documentation/wiki/Remix-buildout/
