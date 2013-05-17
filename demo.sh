@@ -1,3 +1,3 @@
 #!/bin/sh
 
-bin/paster serve src/oerpub.rhaptoslabs.swordpushweb/oerpub/rhaptoslabs/demo.ini
+bin/paster serve src/remix/oerpub/rhaptoslabs/demo.ini

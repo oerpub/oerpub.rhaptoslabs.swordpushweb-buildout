@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./bin/paster serve src/oerpub.rhaptoslabs.swordpushweb/oerpub/rhaptoslabs/development.ini --reload
+./bin/paster serve src/remix/oerpub/rhaptoslabs/development.ini --reload
