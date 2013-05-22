@@ -41,13 +41,13 @@ def stop():
     """
     Shutdown the pyramid app.
     """
-    _with_deploy_env(['./bin/paster serve src/oerpub.rhaptoslabs.swordpushweb/oerpub/rhaptoslabs/production.ini --stop-daemon'])
+    _with_deploy_env(['./bin/paster serve src/remix/oerpub/rhaptoslabs/production.ini --stop-daemon'])
         
 def start():
     """
     Start up the pyramid app.
     """
-    _with_deploy_env(['./bin/paster serve src/oerpub.rhaptoslabs.swordpushweb/oerpub/rhaptoslabs/production.ini --daemon'])
+    _with_deploy_env(['./bin/paster serve src/remix/oerpub/rhaptoslabs/production.ini --daemon'])
 
 def status():
     """
@@ -69,7 +69,7 @@ def status():
     git_packages = ['oerpub.rhaptoslabs.cnxml2htmlpreview',
                     'oerpub.rhaptoslabs.sword1cnx',
                     'oerpub.rhaptoslabs.sword2cnx',
-                    'oerpub.rhaptoslabs.swordpushweb',
+                    'remix',
                     'rhaptos.cnxmlutils',
                     ]
 
